@@ -1,0 +1,27 @@
+{
+    "name": "try-rembg",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "cacheFrom": "ghcr.io/nmemoto/try-rembg"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "GitHub.vscode-pull-request-github",
+                "eamodio.gitlens"
+            ]
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/github-cli:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "latest",
+            "installJupyterlab": true
+        }
+    },
+    "postCreateCommand": "sudo apt-get install -y imagemagick && pip install rembg",
+    "remoteUser": "vscode"
+}
+  
