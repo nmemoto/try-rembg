@@ -21,7 +21,7 @@
             "installJupyterlab": true
         }
     },
-    "postCreateCommand": "sudo apt-get install -y imagemagick && pip install rembg",
+    "postCreateCommand": "sudo apt-get update -y && sudo apt-get install -y imagemagick && sudo apt-get clean && pip install rembg",
     "remoteUser": "vscode"
 }
   
